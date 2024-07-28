@@ -1,0 +1,125 @@
+﻿using OpenERP.Enums.Global;
+using OpenERP.Models.Global;
+
+namespace OpenERP.Data.Seeders.Global
+{
+    public static class CompanySeeder
+    {
+        public static void Seed(AppDbContext context)
+        {
+            if (context.Companies.Any())
+                return;
+
+            var companies = new Company[]
+            {
+                // USA BANK
+                new Company { LegalName = "Bank of America", TradeName = "Bank of America", Type = CompanyType.Bank },
+                new Company { LegalName = "JPMorgan Chase", TradeName = "JPMorgan Chase", Type = CompanyType.Bank },
+                new Company { LegalName = "Wells Fargo", TradeName = "Wells Fargo", Type = CompanyType.Bank },
+                new Company { LegalName = "Citigroup", TradeName = "Citigroup", Type = CompanyType.Bank },
+                new Company { LegalName = "Goldman Sachs", TradeName = "Goldman Sachs", Type = CompanyType.Bank },
+                new Company { LegalName = "Morgan Stanley", TradeName = "Morgan Stanley", Type = CompanyType.Bank },
+                new Company { LegalName = "U.S. Bancorp", TradeName = "U.S. Bancorp", Type = CompanyType.Bank },
+                new Company { LegalName = "PNC Financial Services", TradeName = "PNC Financial Services", Type = CompanyType.Bank },
+                new Company { LegalName = "TD Bank", TradeName = "TD Bank", Type = CompanyType.Bank },
+                new Company { LegalName = "Capital One", TradeName = "Capital One", Type = CompanyType.Bank },
+                new Company { LegalName = "HSBC Bank USA", TradeName = "HSBC Bank USA", Type = CompanyType.Bank },
+                new Company { LegalName = "Charles Schwab Corporation", TradeName = "Charles Schwab Corporation", Type = CompanyType.Bank },
+                new Company { LegalName = "American Express", TradeName = "American Express", Type = CompanyType.Bank },
+                new Company { LegalName = "Ally Financial", TradeName = "Ally Financial", Type = CompanyType.Bank },
+                new Company { LegalName = "Discover Financial Services", TradeName = "Discover Financial Services", Type = CompanyType.Bank },
+                new Company { LegalName = "BB&T Corporation", TradeName = "BB&T Corporation", Type = CompanyType.Bank },
+                new Company { LegalName = "SunTrust Banks", TradeName = "SunTrust Banks", Type = CompanyType.Bank },
+                new Company { LegalName = "Regions Financial Corporation", TradeName = "Regions Financial Corporation", Type = CompanyType.Bank },
+                new Company { LegalName = "Fifth Third Bank", TradeName = "Fifth Third Bank", Type = CompanyType.Bank },
+                new Company { LegalName = "KeyBank", TradeName = "KeyBank", Type = CompanyType.Bank },
+                // USA University
+                new Company { LegalName = "Harvard University", TradeName = "Harvard", Type = CompanyType.Education },
+                new Company { LegalName = "Stanford University", TradeName = "Stanford", Type = CompanyType.Education },
+                new Company { LegalName = "Massachusetts Institute of Technology", TradeName = "MIT", Type = CompanyType.Education },
+                new Company { LegalName = "California Institute of Technology", TradeName = "Caltech", Type = CompanyType.Education },
+                new Company { LegalName = "Princeton University", TradeName = "Princeton", Type = CompanyType.Education },
+                new Company { LegalName = "University of Chicago", TradeName = "UChicago", Type = CompanyType.Education },
+                new Company { LegalName = "Columbia University", TradeName = "Columbia", Type = CompanyType.Education },
+                new Company { LegalName = "Yale University", TradeName = "Yale", Type = CompanyType.Education },
+                new Company { LegalName = "University of Pennsylvania", TradeName = "Penn", Type = CompanyType.Education },
+                new Company { LegalName = "Duke University", TradeName = "Duke", Type = CompanyType.Education },
+                new Company { LegalName = "Johns Hopkins University", TradeName = "Johns Hopkins", Type = CompanyType.Education },
+                new Company { LegalName = "Northwestern University", TradeName = "Northwestern", Type = CompanyType.Education },
+                new Company { LegalName = "University of California, Berkeley", TradeName = "UC Berkeley", Type = CompanyType.Education },
+                new Company { LegalName = "University of California, Los Angeles", TradeName = "UCLA", Type = CompanyType.Education },
+                new Company { LegalName = "University of Michigan, Ann Arbor", TradeName = "Michigan", Type = CompanyType.Education },
+                new Company { LegalName = "New York University", TradeName = "NYU", Type = CompanyType.Education },
+                new Company { LegalName = "Cornell University", TradeName = "Cornell", Type = CompanyType.Education },
+                new Company { LegalName = "University of Southern California", TradeName = "USC", Type = CompanyType.Education },
+                new Company { LegalName = "Carnegie Mellon University", TradeName = "CMU", Type = CompanyType.Education },
+                new Company { LegalName = "University of Virginia", TradeName = "UVA", Type = CompanyType.Education },
+                // Brazil
+                new Company { LegalName = "Banco do Brasil S.A.", TradeName = "Banco do Brasil", Type = CompanyType.Bank },
+                new Company { LegalName = "Caixa Econômica Federal (CEF)", TradeName = "Caixa Econômica", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Bradesco S.A.", TradeName = "Bradesco", Type = CompanyType.Bank },
+                new Company { LegalName = "Itaú Unibanco Holding S.A.", TradeName = "Itaú Unibanco", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Santander (Brasil) S.A.", TradeName = "Santander", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Safra S.A.", TradeName = "Banco Safra", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco BTG Pactual S.A.", TradeName = "BTG Pactual", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Votorantim S.A.", TradeName = "Banco Votorantim", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Inter S.A.", TradeName = "Banco Inter", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Original S.A.", TradeName = "Banco Original", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Pine S.A.", TradeName = "Banco Pine", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Daycoval S.A.", TradeName = "Banco Daycoval", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Pan S.A.", TradeName = "Banco Pan", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco BMG S.A.", TradeName = "BMG", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco do Nordeste do Brasil S.A.", TradeName = "Banco do Nordeste", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco do Estado do Rio Grande do Sul S.A. (Banrisul)", TradeName = "Banrisul", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco do Estado do Espírito Santo S.A. (Banestes)", TradeName = "Banestes", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco da Amazônia S.A. (BASA)", TradeName = "Banco da Amazônia", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco Regional de Brasília S.A. (BRB)", TradeName = "BRB", Type = CompanyType.Bank },
+                new Company { LegalName = "Banco do Estado de Sergipe S.A. (Banese)", TradeName = "Banese", Type = CompanyType.Bank },
+                new Company { LegalName = "Nu Bank", TradeName = "Nu Bank", Type = CompanyType.Bank },
+                // Brazil University
+                new Company { LegalName = "Pontifícia Universidade Católica de São Paulo", TradeName = "PUC-SP", Type = CompanyType.Education },
+                new Company { LegalName = "Pontifícia Universidade Católica do Rio de Janeiro", TradeName = "PUC-Rio", Type = CompanyType.Education },
+                new Company { LegalName = "Fundação Getulio Vargas", TradeName = "FGV", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Presbiteriana Mackenzie", TradeName = "Mackenzie", Type = CompanyType.Education },
+                new Company { LegalName = "Escola Superior de Propaganda e Marketing", TradeName = "ESPM", Type = CompanyType.Education },
+                new Company { LegalName = "Insper Instituto de Ensino e Pesquisa", TradeName = "Insper", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Anhembi Morumbi", TradeName = "Anhembi Morumbi", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Cruzeiro do Sul", TradeName = "Unicsul", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Paulista", TradeName = "UNIP", Type = CompanyType.Education },
+                new Company { LegalName = "Centro Universitário Belas Artes de São Paulo", TradeName = "Belas Artes", Type = CompanyType.Education },
+                new Company { LegalName = "Centro Universitário da Fundação Educacional Inaciana Pe Sabóia de Medeiros", TradeName = "FEI", Type = CompanyType.Education },
+                new Company { LegalName = "Centro Universitário de Brasília", TradeName = "UniCEUB", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade do Vale do Rio dos Sinos", TradeName = "Unisinos", Type = CompanyType.Education },
+                new Company { LegalName = "Pontifícia Universidade Católica do Rio Grande do Sul", TradeName = "PUCRS", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade de Caxias do Sul", TradeName = "UCS", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Católica de Brasília", TradeName = "UCB", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Metodista de São Paulo", TradeName = "UMESP", Type = CompanyType.Education },
+                new Company { LegalName = "Faculdade de Direito de Vitória", TradeName = "FDV", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Tiradentes", TradeName = "Unit", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade de São Paulo", TradeName = "USP", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Estadual de Campinas", TradeName = "Unicamp", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Rio de Janeiro", TradeName = "UFRJ", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade do Estado do Rio de Janeiro", TradeName = "UERJ", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Minas Gerais", TradeName = "UFMG", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Rio Grande do Sul", TradeName = "UFRGS", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Estadual Paulista", TradeName = "Unesp", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Paraná", TradeName = "UFPR", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Santa Catarina", TradeName = "UFSC", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Pernambuco", TradeName = "UFPE", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de São Carlos", TradeName = "UFSCar", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade de Brasília", TradeName = "UnB", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal da Bahia", TradeName = "UFBA", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Ceará", TradeName = "UFC", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Goiás", TradeName = "UFG", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Espírito Santo", TradeName = "UFES", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Rio Grande do Norte", TradeName = "UFRN", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Sergipe", TradeName = "UFS", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal de Mato Grosso", TradeName = "UFMT", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Amazonas", TradeName = "UFAM", Type = CompanyType.Education },
+                new Company { LegalName = "Universidade Federal do Pará", TradeName = "UFPA", Type = CompanyType.Education },
+            };
+            context.Companies.AddRange(companies);
+            context.SaveChanges();
+        }
+    }
+}
